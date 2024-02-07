@@ -1,0 +1,25 @@
+@font-face {
+    font-family: Sovana;
+    src: url(fonts/sovana-regular.ttf);
+}
+
+body {
+    margin: 0;
+}
+
+.cover h1 {
+    font-family: Sovana serif;
+    font-size: 100px;
+}
+
+.parallax {
+    background-image: url("https://assets.bonappetit.com/photos/57bf2b134395c0582bb62f94/16:9/w_2560%2Cc_limit/hometown-bbq-meat-and-sides-barbecue.jpg");
+    min-height: 800px; 
+    margin-top: 150px;
+    width: 60%;
+    float: right;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
