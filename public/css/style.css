@@ -1,25 +1,84 @@
 @font-face {
     font-family: Sovana;
-    src: url(fonts/sovana-regular.ttf);
+    src: url(../fonts/sovana-regular.ttf);
 }
+
+@import url(https://fonts.googleapis.com/css2?family=Abel&display=swap);
 
 body {
     margin: 0;
 }
 
-.cover h1 {
-    font-family: Sovana serif;
-    font-size: 100px;
+.logo {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.logo img {
+    width: 50px;
+    margin-left: 16px;
+}
+
+.navbar li {
+    display: inline;
+}
+
+.navbar {
+    padding: 2px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.navbar a {
+    padding: 4px 18px;
+    font-family: Abel;
+    color: #000000;
+    text-decoration: none;
+}
+
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: #000000;
+  }
+
+.hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 60%;
+    transform: scaleX(0) translateX(-40%);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+    transform-origin: bottom center;
+    transition: transform 0.25s ease-out;
+    left: 20%;
+}
+
+.hover-underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom center;
+    left: 20%;
 }
 
 .parallax {
+    display: flex;
+    align-items: center;
     background-image: url("https://assets.bonappetit.com/photos/57bf2b134395c0582bb62f94/16:9/w_2560%2Cc_limit/hometown-bbq-meat-and-sides-barbecue.jpg");
-    min-height: 800px; 
-    margin-top: 150px;
-    width: 60%;
+    min-height: 700px; 
+    margin-top: 100px;
+    width: 65%;
     float: right;
     background-attachment: fixed;
-    background-position: center;
+    background-position: left center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.parallax h1 {
+    margin: 0px -250px 100px;
+    font-family: Sovana;
+    font-size: 120px;
+    backdrop-filter: blur(1px);
 }
